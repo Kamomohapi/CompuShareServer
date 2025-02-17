@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hx8j3gJ6nqIEPgubnniOGSjo81m/nDVU0bws7FpoAUTwbB1r6Vm1sHuk76AxIEsPzUMc1lrqxYrBHMGqfKIjjw==",
+  "dgSpecHash": "5E8OuHlBAB0hQ924h5/QsiGH6VDAToHJbqpU0LzBuPp6lvbW0Ku+/9qrjeuIcAEFksrDwO2ImQK4SeNLyOPnSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

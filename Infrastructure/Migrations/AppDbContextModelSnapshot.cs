@@ -54,7 +54,7 @@ namespace Infrastructure.Migrations
                             Id = 1,
                             Email = "thabo@gmail.com",
                             Name = "Thabo",
-                            Password = "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u",
+                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
                             Surname = "Khoza"
                         },
                         new
@@ -62,7 +62,7 @@ namespace Infrastructure.Migrations
                             Id = 2,
                             Email = "thato@gmail.com",
                             Name = "Thato",
-                            Password = "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u",
+                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
                             Surname = "Mamatela"
                         });
                 });
@@ -88,6 +88,73 @@ namespace Infrastructure.Migrations
                     b.HasKey("ComputerId");
 
                     b.ToTable("Computers");
+                });
+
+            modelBuilder.Entity("Domain.Entities.ComputerApplication", b =>
+                {
+                    b.Property<int>("ApplicationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ApplicationId"));
+
+                    b.Property<string>("ApplicationStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsCollected")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StudentNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentSurname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TimeApplied")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ApplicationId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Applications");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Document", b =>
+                {
+                    b.Property<int>("DocumentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DocumentId"));
+
+                    b.Property<int>("ApplicationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ContentType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("FileData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UploadedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("DocumentId");
+
+                    b.HasIndex("ApplicationId");
+
+                    b.ToTable("Documents");
                 });
 
             modelBuilder.Entity("Domain.Entities.Refubishment", b =>
@@ -122,15 +189,15 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentId"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StudentEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -149,39 +216,61 @@ namespace Infrastructure.Migrations
                         new
                         {
                             StudentId = 1,
+                            Email = "102412345@tut4life.ac.za",
                             Name = "Kamohelo",
-                            Password = "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u",
-                            StudentEmail = "102412345@tut4life.ac.za",
+                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
                             StudentNumber = 102412345,
                             Surname = "Mohapi"
                         },
                         new
                         {
                             StudentId = 2,
+                            Email = "102423456@tut4life.ac.za",
                             Name = "Thabo",
-                            Password = "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u",
-                            StudentEmail = "102423456@tut4life.ac.za",
+                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
                             StudentNumber = 102423456,
                             Surname = "Mohale"
                         },
                         new
                         {
                             StudentId = 3,
+                            Email = "102434567@tut4life.ac.za",
                             Name = "Busisiwe",
-                            Password = "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u",
-                            StudentEmail = "102434567@tut4life.ac.za",
+                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
                             StudentNumber = 102434567,
                             Surname = "Mkhize"
                         },
                         new
                         {
                             StudentId = 4,
+                            Email = "102445678@tut4life.ac.za",
                             Name = "Jabulile",
-                            Password = "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u",
-                            StudentEmail = "102445678@tut4life.ac.za",
+                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
                             StudentNumber = 102445678,
                             Surname = "Mkhwanazi"
                         });
+                });
+
+            modelBuilder.Entity("Domain.Entities.ComputerApplication", b =>
+                {
+                    b.HasOne("Domain.Entities.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Document", b =>
+                {
+                    b.HasOne("Domain.Entities.ComputerApplication", "ComputerApplication")
+                        .WithMany()
+                        .HasForeignKey("ApplicationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ComputerApplication");
                 });
 
             modelBuilder.Entity("Domain.Entities.Refubishment", b =>

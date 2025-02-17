@@ -21,7 +21,10 @@ namespace Infrastructure.Data
         public DbSet<Computer> Computers { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Admin> Admins { get; set; }
-        
+        public DbSet<ComputerApplication> Applications { get; set; }
+        public DbSet<Document> Documents { get; set; }
+
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,10 +35,10 @@ namespace Infrastructure.Data
 
             modelBuilder.Entity<Student>().HasData(
 
-                new Student { StudentId = 1, StudentNumber = 102412345, StudentEmail = "102412345@tut4life.ac.za", Name = "Kamohelo", Surname = "Mohapi", Password = hashedPassword },
-                new Student { StudentId = 2, StudentNumber = 102423456, StudentEmail = "102423456@tut4life.ac.za", Name = "Thabo", Surname = "Mohale", Password = hashedPassword },
-                new Student { StudentId = 3, StudentNumber = 102434567, StudentEmail = "102434567@tut4life.ac.za", Name = "Busisiwe", Surname = "Mkhize", Password = hashedPassword },
-                new Student { StudentId = 4, StudentNumber = 102445678, StudentEmail = "102445678@tut4life.ac.za", Name = "Jabulile", Surname = "Mkhwanazi", Password = hashedPassword });
+                new Student { StudentId = 1, StudentNumber = 102412345, Email = "102412345@tut4life.ac.za", Name = "Kamohelo", Surname = "Mohapi", Password = hashedPassword },
+                new Student { StudentId = 2, StudentNumber = 102423456, Email = "102423456@tut4life.ac.za", Name = "Thabo", Surname = "Mohale", Password = hashedPassword },
+                new Student { StudentId = 3, StudentNumber = 102434567, Email = "102434567@tut4life.ac.za", Name = "Busisiwe", Surname = "Mkhize", Password = hashedPassword },
+                new Student { StudentId = 4, StudentNumber = 102445678, Email = "102445678@tut4life.ac.za", Name = "Jabulile", Surname = "Mkhwanazi", Password = hashedPassword });
 
 
 

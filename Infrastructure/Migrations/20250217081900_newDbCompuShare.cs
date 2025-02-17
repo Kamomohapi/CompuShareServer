@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Update : Migration
+    public partial class newDbCompuShare : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,7 +51,7 @@ namespace Infrastructure.Migrations
                     StudentId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StudentNumber = table.Column<int>(type: "int", nullable: false),
-                    StudentEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -82,25 +82,83 @@ namespace Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Applications",
+                columns: table => new
+                {
+                    ApplicationId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    StudentId = table.Column<int>(type: "int", nullable: false),
+                    StudentName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StudentNumber = table.Column<int>(type: "int", nullable: false),
+                    StudentSurname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ApplicationStatus = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TimeApplied = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsCollected = table.Column<bool>(type: "bit", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Applications", x => x.ApplicationId);
+                    table.ForeignKey(
+                        name: "FK_Applications_Students_StudentId",
+                        column: x => x.StudentId,
+                        principalTable: "Students",
+                        principalColumn: "StudentId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Documents",
+                columns: table => new
+                {
+                    DocumentId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ApplicationId = table.Column<int>(type: "int", nullable: false),
+                    FileName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FileData = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    ContentType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UploadedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Documents", x => x.DocumentId);
+                    table.ForeignKey(
+                        name: "FK_Documents_Applications_ApplicationId",
+                        column: x => x.ApplicationId,
+                        principalTable: "Applications",
+                        principalColumn: "ApplicationId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "Admins",
                 columns: new[] { "Id", "Email", "Name", "Password", "Surname" },
                 values: new object[,]
                 {
-                    { 1, "thabo@gmail.com", "Thabo", "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u", "Khoza" },
-                    { 2, "thato@gmail.com", "Thato", "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u", "Mamatela" }
+                    { 1, "thabo@gmail.com", "Thabo", "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe", "Khoza" },
+                    { 2, "thato@gmail.com", "Thato", "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe", "Mamatela" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Students",
-                columns: new[] { "StudentId", "Name", "Password", "StudentEmail", "StudentNumber", "Surname" },
+                columns: new[] { "StudentId", "Email", "Name", "Password", "StudentNumber", "Surname" },
                 values: new object[,]
                 {
-                    { 1, "Kamohelo", "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u", "102412345@tut4life.ac.za", 102412345, "Mohapi" },
-                    { 2, "Thabo", "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u", "102423456@tut4life.ac.za", 102423456, "Mohale" },
-                    { 3, "Busisiwe", "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u", "102434567@tut4life.ac.za", 102434567, "Mkhize" },
-                    { 4, "Jabulile", "$2a$11$wHAUIVeA7xXFWo.dcLldDO2hmF4LIBAD49VG0/cxDpJYf6UXynF8u", "102445678@tut4life.ac.za", 102445678, "Mkhwanazi" }
+                    { 1, "102412345@tut4life.ac.za", "Kamohelo", "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe", 102412345, "Mohapi" },
+                    { 2, "102423456@tut4life.ac.za", "Thabo", "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe", 102423456, "Mohale" },
+                    { 3, "102434567@tut4life.ac.za", "Busisiwe", "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe", 102434567, "Mkhize" },
+                    { 4, "102445678@tut4life.ac.za", "Jabulile", "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe", 102445678, "Mkhwanazi" }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Applications_StudentId",
+                table: "Applications",
+                column: "StudentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Documents_ApplicationId",
+                table: "Documents",
+                column: "ApplicationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Refubishments_ComputerId",
@@ -115,13 +173,19 @@ namespace Infrastructure.Migrations
                 name: "Admins");
 
             migrationBuilder.DropTable(
+                name: "Documents");
+
+            migrationBuilder.DropTable(
                 name: "Refubishments");
 
             migrationBuilder.DropTable(
-                name: "Students");
+                name: "Applications");
 
             migrationBuilder.DropTable(
                 name: "Computers");
+
+            migrationBuilder.DropTable(
+                name: "Students");
         }
     }
 }

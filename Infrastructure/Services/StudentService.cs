@@ -34,7 +34,7 @@ namespace Infrastructure.Services
 
         public async Task<LoginResponse> LoginStudent(StudentLoginDTO studentLogin)
         {
-            var getStudent = await FindStudentByEmail(studentLogin.StudentEmail!);
+            var getStudent = await FindStudentByEmail(studentLogin.Email!);
 
             if (getStudent == null)
             {
@@ -56,9 +56,9 @@ namespace Infrastructure.Services
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var userClaims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, student.StudentNumber.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, student.StudentId.ToString()),
                 new Claim(ClaimTypes.Name, student.Name),
-                new Claim(ClaimTypes.Email, student.StudentEmail),
+                new Claim(ClaimTypes.Email, student.Email),
                 new Claim(ClaimTypes.Role,"Student")
             };
             var token = new JwtSecurityToken(
@@ -73,7 +73,7 @@ namespace Infrastructure.Services
 
         public async Task<Student?>FindStudentByEmail(string email)
         {
-            var student = await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentEmail == email);
+            var student = await _appDbContext.Students.FirstOrDefaultAsync(s => s.Email == email);
             return student;
         }
     }

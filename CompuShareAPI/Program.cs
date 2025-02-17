@@ -34,6 +34,27 @@ namespace CompuShareAPI
                     Scheme = "bearer"
                 });
 
+
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "CompuShare api",
+                    Description = "Web API for managing CompuShare APIs",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Contact",
+                        Url = new Uri("https://example.com/contact")
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "License",
+                        Url = new Uri("https://example.com/license")
+                    },
+
+
+                });
+                options.OperationFilter<FileUploadOperationFilter>();
                 // Add a global security requirement to Swagger
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
         {
@@ -69,10 +90,11 @@ namespace CompuShareAPI
 
             });
             //builder.Services.ServiceContainer;
-
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddAuthorization(options =>
             {
                 options.AddPolicy("Student",policy => policy.RequireClaim(ClaimTypes.Role));
+                options.AddPolicy("Admin",policy => policy.RequireClaim(ClaimTypes.Role));
             });
 
             var app = builder.Build();

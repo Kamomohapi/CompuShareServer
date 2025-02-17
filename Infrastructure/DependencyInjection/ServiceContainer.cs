@@ -50,7 +50,7 @@ namespace Infrastructure.DependencyInjection
             services.AddScoped<IStudent, StudentService>();
             services.AddScoped<IComputer, ComputerService>();
             services.AddScoped<IAdmin, AdminService>();
-            
+            services.AddScoped<IComputerApplication, ComputerApplicationService>();
 
             return services;
         }

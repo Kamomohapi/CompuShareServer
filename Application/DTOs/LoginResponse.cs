@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    public record LoginResponse(bool Flag, string message = null!, string Token = null!);
+    public record LoginResponse(bool Flag, string Message = null!, string Token = null!);
     
 }

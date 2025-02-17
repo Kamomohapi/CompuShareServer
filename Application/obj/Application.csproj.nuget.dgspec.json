@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Application\\Application.csproj": {}
+    "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Application\\Application.csproj": {
+    "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\218501036\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Application\\obj\\",
+        "outputPath": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\218501036\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Domain\\Domain.csproj"
+              "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Domain.csproj"
               }
             }
           }
@@ -48,6 +48,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Domain\\Domain.csproj": {
+    "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\218501036\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\218501036\\Documents\\CompuShareTUT\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\218501036\\AppData\\Roaming\\NuGet\\NuGet.Config",
