@@ -28,5 +28,14 @@ namespace CompuShareAPI.Controllers
             
             return Ok(login);
         }
+
+        [HttpGet("my-application-status")]
+
+        public async Task<ActionResult> MyApplicationStatus()
+        {
+            var status = await _student.StudentApplicationStatus();
+
+            return Ok(status);
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Domain.Entities
         public string? StudentSurname { get; set; }
         public string? ApplicationStatus { get; set; }
         public DateTime TimeApplied { get; set; } = DateTime.Now;
-        public bool? IsCollected { get; set; }
+    
         
 
     }

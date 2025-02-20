@@ -20,6 +20,35 @@ namespace Infrastructure.Services
             _appDbContext = appDbContext;
         }
 
+        public async Task<ResponseHandler> AssignComputer(int studentNum)
+        {
+            // Get the student from the database
+            var student = await _appDbContext.Students.Where(s => s.StudentNumber == studentNum).FirstOrDefaultAsync();
+            int countPcs = await _appDbContext.Computers.Where(a => a.IsAssigned == false).CountAsync();
+            
+            if (student == null)
+            {
+                return new ResponseHandler(false, "Student not found.");
+            }
+
+            // Check if the student already has an assigned computer
+            if (student.ComputerId == 0)
+            {
+                ///return new ResponseHandler(false, "Student already has a computer assigned.");
+                var availablePc = await _appDbContext.Computers.FirstOrDefaultAsync(pc => !pc.IsAssigned);
+                if (availablePc == null)
+                {
+                    return new ResponseHandler(false, "No available computers.");
+                }
+                student.ComputerId = availablePc.ComputerId;
+                availablePc.IsAssigned = true;
+                await _appDbContext.SaveChangesAsync();
+            }
+
+            return new ResponseHandler(true, $"Computer assigned to student {studentNum}.");
+        }
+
+
         public async Task<List<Computer>> GetPCs()
         {
             var computers = await _appDbContext.Computers.ToListAsync();

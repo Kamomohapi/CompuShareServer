@@ -11,5 +11,6 @@ namespace Application.Contracts
     public interface IStudent
     {
         Task<LoginResponse> LoginStudent(StudentLoginDTO studentLogin);
+        Task<StudentStatusDTO> StudentApplicationStatus();
     }
 }

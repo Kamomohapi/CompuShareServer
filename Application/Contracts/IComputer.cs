@@ -12,5 +12,6 @@ namespace Application.Contracts
     {
         Task <String> StorePC (ComputerDTO computerDTO);
         Task<List<Computer>> GetPCs();
+        Task<ResponseHandler> AssignComputer(int studentNum);
     }
 }

@@ -94,7 +94,7 @@ namespace Infrastructure.Services
         public async Task<ResponseHandler> CreateApplication(ComputerApplicationDTO application)
         {
             if (application == null)
-                return new ResponseHandler(false, "Application cannot be empty");
+                return new ResponseHandler(false, "Application cannot be empty.");
 
             if (application.File == null || (application.File.Length == 0))
                 return new ResponseHandler(false, "Invalid file.");
@@ -106,6 +106,16 @@ namespace Infrastructure.Services
 
             int studentId = Convert.ToInt32(userIdClaim.Value);
 
+            int studentNum = await _appDbContext.Students.Where(s => s.StudentId == studentId).Select(s => s.StudentNumber).FirstOrDefaultAsync();
+
+            if (Convert.ToInt32(application.StudentNumber) != studentNum)
+            {
+                return new ResponseHandler(false, "Student number does not match.");
+            }
+
+
+
+
             using var transaction = await _appDbContext.Database.BeginTransactionAsync();
             try
             {
@@ -115,6 +125,15 @@ namespace Infrastructure.Services
 
                 var studentInfo = await _appDbContext.Students.FirstOrDefaultAsync(s => s.StudentId == studentId);
 
+                 if (studentInfo!.IsRegistered == false)
+                {
+                    return new ResponseHandler(false, "Not registered, cannot proceed with application.");
+                }
+                else if (studentInfo.IsFunded == true)
+                {
+                    return new ResponseHandler(false, "Cannot proceed with the application, already have funding.");
+                }
+
                 var applicationExists = await _appDbContext.Applications
                     .AsTracking()
                     .FirstOrDefaultAsync(s => s.StudentId == studentId);
@@ -123,39 +142,40 @@ namespace Infrastructure.Services
                     return new ResponseHandler(false, "Already applied, please check your email for more information.");
                 }
 
-                // Create and save application
-                var pcApplication = new ComputerApplication
+                if (studentInfo.IsRegistered == true && studentInfo.IsFunded == false)
                 {
-                    StudentId = studentId,
-                    StudentName = studentInfo?.Name,
-                    StudentSurname = studentInfo?.Surname,
-                    StudentNumber = studentInfo!.StudentNumber,
-                    ApplicationStatus = "pending",
-                    IsCollected = false,
-                };
+                    var pcApplication = new ComputerApplication
+                    {
+                        StudentId = studentId,
+                        StudentName = studentInfo?.Name,
+                        StudentSurname = studentInfo?.Surname,
+                        StudentNumber = studentInfo!.StudentNumber,
+                        ApplicationStatus = "Approved",
+                    };
 
-                _appDbContext.Applications.Add(pcApplication);
-                await _appDbContext.SaveChangesAsync();
+                    _appDbContext.Applications.Add(pcApplication);
+                    await _appDbContext.SaveChangesAsync();
 
-                // Save file document
-                using var memoryStream = new MemoryStream();
-                await application.File.CopyToAsync(memoryStream);
+                    using var memoryStream = new MemoryStream();
+                    await application.File.CopyToAsync(memoryStream);
 
-                var document = new Document
-                {
-                    FileName = application.File.FileName,
-                    FileData = memoryStream.ToArray(),
-                    ContentType = application.File.ContentType,
-                    ApplicationId = pcApplication.ApplicationId // Assuming the application has an ID property
-                };
+                    var document = new Document
+                    {
+                        FileName = application.File.FileName,
+                        FileData = memoryStream.ToArray(),
+                        ContentType = application.File.ContentType,
+                        ApplicationId = pcApplication.ApplicationId // Assuming the application has an ID property
+                    };
 
-                _appDbContext.Documents.Add(document);
-                await _appDbContext.SaveChangesAsync();
+                    _appDbContext.Documents.Add(document);
+                    await _appDbContext.SaveChangesAsync();
 
-                // Commit transaction
+                }
+             
                 await transaction.CommitAsync();
 
                 return new ResponseHandler(true, "Application and file uploaded successfully.");
+
             }
             catch (Exception ex)
             {
@@ -163,8 +183,6 @@ namespace Infrastructure.Services
                 return new ResponseHandler(false, $"An error occurred: {ex.Message}");
             }
         }
-
-
 
 
         public async Task<List<ComputerApplication>> GetAllApplication()

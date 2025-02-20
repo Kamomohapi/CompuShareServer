@@ -32,5 +32,11 @@ namespace CompuShareAPI.Controllers
             var computers = await _computer.GetPCs();
             return Ok(computers);
         }
+        [HttpPut("assign-computer/{studentnumber}")]
+        public async Task<ActionResult> AssignPc(int studentnumber)
+        {
+            var assignPc = await _computer.AssignComputer(studentnumber);
+            return Ok(assignPc);
+        }
     }
 }

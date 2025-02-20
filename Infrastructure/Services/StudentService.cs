@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 using System.Drawing;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Infrastructure.Services
 {
@@ -23,13 +24,14 @@ namespace Infrastructure.Services
     {
        private readonly AppDbContext _appDbContext;
        private readonly IConfiguration _configuration;
-       //private readonly IHttpContextAccessor _httpContextAccessor;
+       private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public StudentService(AppDbContext appDbContext, IConfiguration configuration)
+        public StudentService(AppDbContext appDbContext, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             this._appDbContext = appDbContext;
             this._configuration = configuration;
-            //this._httpContextAccessor = httpContextAccessor;
+            _httpContextAccessor = httpContextAccessor;
+         
         }
 
         public async Task<LoginResponse> LoginStudent(StudentLoginDTO studentLogin)
@@ -75,6 +77,29 @@ namespace Infrastructure.Services
         {
             var student = await _appDbContext.Students.FirstOrDefaultAsync(s => s.Email == email);
             return student;
+        }
+
+        public async Task<StudentStatusDTO> StudentApplicationStatus()
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier);
+            string reponse = string.Empty;
+
+            if (userIdClaim == null)
+                throw new UnauthorizedAccessException("Not authenticated");
+
+            int studentId = Convert.ToInt32(userIdClaim.Value);
+
+            var status =  await _appDbContext.Applications.Where(s=> s.StudentId == studentId)
+                .Select(a => a.ApplicationStatus)
+                .FirstOrDefaultAsync();
+
+            if (status == null)
+                throw new KeyNotFoundException("Status not found!");
+
+            if (string.IsNullOrEmpty(status))
+                throw new KeyNotFoundException("Empty string!");
+
+            return new StudentStatusDTO {Status = status };
         }
     }
 }

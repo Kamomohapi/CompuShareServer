@@ -35,10 +35,11 @@ namespace Infrastructure.Data
 
             modelBuilder.Entity<Student>().HasData(
 
-                new Student { StudentId = 1, StudentNumber = 102412345, Email = "102412345@tut4life.ac.za", Name = "Kamohelo", Surname = "Mohapi", Password = hashedPassword },
-                new Student { StudentId = 2, StudentNumber = 102423456, Email = "102423456@tut4life.ac.za", Name = "Thabo", Surname = "Mohale", Password = hashedPassword },
-                new Student { StudentId = 3, StudentNumber = 102434567, Email = "102434567@tut4life.ac.za", Name = "Busisiwe", Surname = "Mkhize", Password = hashedPassword },
-                new Student { StudentId = 4, StudentNumber = 102445678, Email = "102445678@tut4life.ac.za", Name = "Jabulile", Surname = "Mkhwanazi", Password = hashedPassword });
+                new Student { StudentId = 1, StudentNumber = 102412345, Email = "102412345@tut4life.ac.za", Name = "Kamohelo", Surname = "Mohapi", IsRegistered = true, IsFunded = false, ComputerId = 0, Password = hashedPassword },
+                new Student { StudentId = 2, StudentNumber = 102423456, Email = "102423456@tut4life.ac.za", Name = "Thabo", Surname = "Mohale", IsRegistered = true, IsFunded = false, ComputerId = 0, Password = hashedPassword },
+                new Student { StudentId = 3, StudentNumber = 102434567, Email = "102434567@tut4life.ac.za", Name = "Busisiwe", Surname = "Smith", IsRegistered = true, IsFunded = false, ComputerId = 0, Password = hashedPassword },
+                new Student { StudentId = 4, StudentNumber = 102445678, Email = "102445678@tut4life.ac.za", Name = "Jabulile", Surname = "James", IsRegistered = false, IsFunded = false, ComputerId = 0, Password = hashedPassword },
+                new Student { StudentId = 5, StudentNumber = 218501036, Email = "218501036@tut4life.ac.za", Name = "Molemo", Surname = "Mohapi", IsRegistered = true, IsFunded = true, ComputerId = 0, Password = hashedPassword } );
 
 
 

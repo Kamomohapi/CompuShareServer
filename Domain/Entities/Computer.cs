@@ -16,7 +16,9 @@ namespace Domain.Entities
         public string? ComputerVersion { get; set; }
 
         public string? SerialNumber { get; set; }
-
-        
+        public DateTime? UploadDate { get; set; } = DateTime.Now;
+        public DateTime? CollectionDate { get;set; }
+        public bool IsAssigned { get; set; } = false;
+        public bool? IsCollected { get; set; }
     }
 }

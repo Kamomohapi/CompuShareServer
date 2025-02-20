@@ -54,7 +54,7 @@ namespace Infrastructure.Migrations
                             Id = 1,
                             Email = "thabo@gmail.com",
                             Name = "Thabo",
-                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
+                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
                             Surname = "Khoza"
                         },
                         new
@@ -62,7 +62,7 @@ namespace Infrastructure.Migrations
                             Id = 2,
                             Email = "thato@gmail.com",
                             Name = "Thato",
-                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
+                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
                             Surname = "Mamatela"
                         });
                 });
@@ -75,6 +75,9 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ComputerId"));
 
+                    b.Property<DateTime?>("CollectionDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ComputerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -82,8 +85,17 @@ namespace Infrastructure.Migrations
                     b.Property<string>("ComputerVersion")
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<bool>("IsAssigned")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("IsCollected")
+                        .HasColumnType("bit");
+
                     b.Property<string>("SerialNumber")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UploadDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ComputerId");
 
@@ -100,9 +112,6 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("ApplicationStatus")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("IsCollected")
-                        .HasColumnType("bit");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
@@ -189,9 +198,18 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentId"));
 
+                    b.Property<int>("ComputerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsFunded")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRegistered")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -216,38 +234,62 @@ namespace Infrastructure.Migrations
                         new
                         {
                             StudentId = 1,
+                            ComputerId = 0,
                             Email = "102412345@tut4life.ac.za",
+                            IsFunded = false,
+                            IsRegistered = true,
                             Name = "Kamohelo",
-                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
+                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
                             StudentNumber = 102412345,
                             Surname = "Mohapi"
                         },
                         new
                         {
                             StudentId = 2,
+                            ComputerId = 0,
                             Email = "102423456@tut4life.ac.za",
+                            IsFunded = false,
+                            IsRegistered = true,
                             Name = "Thabo",
-                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
+                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
                             StudentNumber = 102423456,
                             Surname = "Mohale"
                         },
                         new
                         {
                             StudentId = 3,
+                            ComputerId = 0,
                             Email = "102434567@tut4life.ac.za",
+                            IsFunded = false,
+                            IsRegistered = true,
                             Name = "Busisiwe",
-                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
+                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
                             StudentNumber = 102434567,
-                            Surname = "Mkhize"
+                            Surname = "Smith"
                         },
                         new
                         {
                             StudentId = 4,
+                            ComputerId = 0,
                             Email = "102445678@tut4life.ac.za",
+                            IsFunded = false,
+                            IsRegistered = false,
                             Name = "Jabulile",
-                            Password = "$2a$11$Cni2kUZHWVhIQJ3IvOH5ne.N.IJHFlno6FyFpllwEE1kxv9CputLe",
+                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
                             StudentNumber = 102445678,
-                            Surname = "Mkhwanazi"
+                            Surname = "James"
+                        },
+                        new
+                        {
+                            StudentId = 5,
+                            ComputerId = 0,
+                            Email = "218501036@tut4life.ac.za",
+                            IsFunded = true,
+                            IsRegistered = true,
+                            Name = "Molemo",
+                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            StudentNumber = 218501036,
+                            Surname = "Mohapi"
                         });
                 });
 
