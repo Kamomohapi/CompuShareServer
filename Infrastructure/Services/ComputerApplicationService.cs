@@ -113,9 +113,6 @@ namespace Infrastructure.Services
                 return new ResponseHandler(false, "Student number does not match.");
             }
 
-
-
-
             using var transaction = await _appDbContext.Database.BeginTransactionAsync();
             try
             {
@@ -127,11 +124,11 @@ namespace Infrastructure.Services
 
                  if (studentInfo!.IsRegistered == false)
                 {
-                    return new ResponseHandler(false, "Not registered, cannot proceed with application.");
+                    return new ResponseHandler(false, "Cannot proceed with the application, you are not registered.");
                 }
                 else if (studentInfo.IsFunded == true)
                 {
-                    return new ResponseHandler(false, "Cannot proceed with the application, already have funding.");
+                    return new ResponseHandler(false, "Cannot proceed with the application, you already have funding.");
                 }
 
                 var applicationExists = await _appDbContext.Applications
@@ -194,9 +191,13 @@ namespace Infrastructure.Services
 
         public async Task<List<ComputerApplication>> GetApprovedApplication()
         {
-            var approvedApplications = await _appDbContext.Applications
-                .Where(a => a.ApplicationStatus == "Approved")
-                .ToListAsync();
+            var approvedApplications = await (from application in _appDbContext.Applications
+                                              join student in _appDbContext.Students
+                                              on application.StudentId equals student.StudentId
+                                              where application.ApplicationStatus == "Approved"
+                                              && student.ComputerId == 0
+                                              select application) // <-- We're selecting applications here
+                                  .ToListAsync();
 
             return approvedApplications!;
         }
