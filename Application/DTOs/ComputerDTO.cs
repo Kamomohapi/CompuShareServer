@@ -9,7 +9,7 @@ namespace Application.DTOs
     public class ComputerDTO
     {
         public string? ComputerName { get; set; }
-        public string? ComputerVerison { get; set;}
+        public string? ComputerVersion { get; set;}
         public string? SerialNumber { get; set; }
     }
 }

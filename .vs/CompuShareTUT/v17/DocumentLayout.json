@@ -3,37 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\218501036\\Documents\\CompuShareServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090757_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20250220090757_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|c:\\users\\218501036\\documents\\compushareserver\\domain\\entities\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|c:\\users\\218501036\\documents\\compushareserver\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090631_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20250220090631_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B3BAE36-4A4A-4480-BC49-5447CB0703A7}|CompuShareAPI\\CompuShareAPI.csproj|c:\\users\\218501036\\documents\\compushareserver\\compushareapi\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B3BAE36-4A4A-4480-BC49-5447CB0703A7}|CompuShareAPI\\CompuShareAPI.csproj|solutionrelative:compushareapi\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|c:\\users\\218501036\\documents\\compushareserver\\infrastructure\\services\\computerapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\computerapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|c:\\users\\218501036\\documents\\compushareserver\\domain\\entities\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Computers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Students.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|c:\\users\\218501036\\documents\\compushareserver\\domain\\entities\\computerapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\computerapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Applications.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|c:\\users\\218501036\\documents\\compushareserver\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B3BAE36-4A4A-4480-BC49-5447CB0703A7}|CompuShareAPI\\CompuShareAPI.csproj|c:\\users\\218501036\\documents\\compushareserver\\compushareapi\\controllers\\computercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,6 +27,35 @@
       "RelativeMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\computerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Computers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B583E6A-7EC3-4B9A-BDAF-D4EB64050271}|Application\\Application.csproj|c:\\users\\218501036\\documents\\compushareserver\\application\\dtos\\computerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B583E6A-7EC3-4B9A-BDAF-D4EB64050271}|Application\\Application.csproj|solutionrelative:application\\dtos\\computerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B583E6A-7EC3-4B9A-BDAF-D4EB64050271}|Application\\Application.csproj|c:\\users\\218501036\\documents\\compushareserver\\application\\contracts\\icomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B583E6A-7EC3-4B9A-BDAF-D4EB64050271}|Application\\Application.csproj|solutionrelative:application\\contracts\\icomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Students.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|c:\\users\\218501036\\documents\\compushareserver\\infrastructure\\migrations\\20250220090757_update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51A00480-3649-4641-839D-CE023E8EBAB2}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20250220090757_update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090631_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20250220090631_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|c:\\users\\218501036\\documents\\compushareserver\\domain\\entities\\computerapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\computerapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Applications.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Refubishments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
@@ -51,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20250219124206_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B3BAE36-4A4A-4480-BC49-5447CB0703A7}|CompuShareAPI\\CompuShareAPI.csproj|c:\\users\\218501036\\documents\\compushareserver\\compushareapi\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3BAE36-4A4A-4480-BC49-5447CB0703A7}|CompuShareAPI\\CompuShareAPI.csproj|solutionrelative:compushareapi\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B3BAE36-4A4A-4480-BC49-5447CB0703A7}|CompuShareAPI\\CompuShareAPI.csproj|c:\\users\\218501036\\documents\\compushareserver\\compushareapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B3BAE36-4A4A-4480-BC49-5447CB0703A7}|CompuShareAPI\\CompuShareAPI.csproj|solutionrelative:compushareapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B583E6A-7EC3-4B9A-BDAF-D4EB64050271}|Application\\Application.csproj|c:\\users\\218501036\\documents\\compushareserver\\application\\contracts\\icomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B583E6A-7EC3-4B9A-BDAF-D4EB64050271}|Application\\Application.csproj|solutionrelative:application\\contracts\\icomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC29C32C-26C2-4372-A486-F2BF3EEFFFF7}|Domain\\Domain.csproj|c:\\users\\218501036\\documents\\compushareserver\\domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,11 +86,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Entities\\Student.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Student.cs",
@@ -95,34 +99,7 @@
               "ViewState": "AQIAAAQAAAAAAAAAAAAAABMAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T13:50:36.631Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250220090757_Update.cs",
-              "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090757_Update.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250220090757_Update.cs",
-              "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090757_Update.cs",
-              "RelativeToolTip": "Infrastructure\\Migrations\\20250220090757_Update.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T09:07:58.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250220090631_Update.cs",
-              "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090631_Update.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250220090631_Update.cs",
-              "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090631_Update.cs",
-              "RelativeToolTip": "Infrastructure\\Migrations\\20250220090631_Update.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T09:06:31.722Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -130,17 +107,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Students [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Students.sql",
-              "ToolTip": "dbo.Students [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-19T12:44:33.088Z",
+              "DocumentIndex": 7,
+              "Title": "ComputerDTO.cs",
+              "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\DTOs\\ComputerDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ComputerDTO.cs",
+              "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\DTOs\\ComputerDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\ComputerDTO.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwAsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T12:45:48.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
+              "Title": "20250220090757_Update.cs",
+              "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090757_Update.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250220090757_Update.cs",
+              "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090757_Update.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20250220090757_Update.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T09:07:58.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250220090631_Update.cs",
+              "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090631_Update.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250220090631_Update.cs",
+              "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250220090631_Update.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20250220090631_Update.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T09:06:31.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.Students [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Students.sql",
+              "ToolTip": "dbo.Students [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-19T12:44:33.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "20250219124206_Update.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Migrations\\20250219124206_Update.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250219124206_Update.cs",
@@ -148,25 +161,24 @@
               "RelativeToolTip": "Infrastructure\\Migrations\\20250219124206_Update.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T12:42:06.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T12:42:06.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "ComputerController.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\CompuShareAPI\\Controllers\\ComputerController.cs",
               "RelativeDocumentMoniker": "CompuShareAPI\\Controllers\\ComputerController.cs",
               "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\CompuShareAPI\\Controllers\\ComputerController.cs",
               "RelativeToolTip": "CompuShareAPI\\Controllers\\ComputerController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCcAAAAIAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T12:30:24.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ComputerApplication.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Entities\\ComputerApplication.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\ComputerApplication.cs",
@@ -174,25 +186,24 @@
               "RelativeToolTip": "Domain\\Entities\\ComputerApplication.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T12:15:17.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T12:15:17.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "ComputerService.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Services\\ComputerService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\ComputerService.cs",
               "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Services\\ComputerService.cs",
               "RelativeToolTip": "Infrastructure\\Services\\ComputerService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA8wBcAAAAIAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAIwFEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T12:04:37.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 8,
               "Title": "IComputer.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\Contracts\\IComputer.cs",
               "RelativeDocumentMoniker": "Application\\Contracts\\IComputer.cs",
@@ -205,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "dbo.Computers [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Computers.sql",
               "ToolTip": "dbo.Computers [Data]",
@@ -215,69 +226,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ComputerApplicationService.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Services\\ComputerApplicationService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\ComputerApplicationService.cs",
               "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Services\\ComputerApplicationService.cs",
               "RelativeToolTip": "Infrastructure\\Services\\ComputerApplicationService.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAjwJgAAAA3AAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAIwBwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T11:36:57.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "ApplicationController.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\CompuShareAPI\\Controllers\\ApplicationController.cs",
               "RelativeDocumentMoniker": "CompuShareAPI\\Controllers\\ApplicationController.cs",
               "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\CompuShareAPI\\Controllers\\ApplicationController.cs",
               "RelativeToolTip": "CompuShareAPI\\Controllers\\ApplicationController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAMwCcAAAAQAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAA9wEoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T08:40:20.252Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Computer.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Entities\\Computer.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Computer.cs",
               "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Domain\\Entities\\Computer.cs",
               "RelativeToolTip": "Domain\\Entities\\Computer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T09:48:47.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "dbo.Refubishments [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Refubishments.sql",
               "ToolTip": "dbo.Refubishments [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-19T09:36:19.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T09:36:19.898Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Data\\AppDbContext.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAWwCgAAACPAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAwwBAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T07:58:04.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "StudentStatusDTO.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Application\\DTOs\\StudentStatusDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\StudentStatusDTO.cs",
@@ -285,12 +295,11 @@
               "RelativeToolTip": "Application\\DTOs\\StudentStatusDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T13:03:14.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T13:03:14.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\CompuShareAPI\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "CompuShareAPI\\Controllers\\StudentController.cs",
@@ -298,22 +307,20 @@
               "RelativeToolTip": "CompuShareAPI\\Controllers\\StudentController.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T13:13:11.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T13:13:11.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "dbo.Applications [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CompuShare/True/SqlTable/dbo.Applications.sql",
               "ToolTip": "dbo.Applications [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-17T12:51:40.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T12:51:40.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\218501036\\Documents\\CompuShareServer\\Infrastructure\\Services\\StudentService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\StudentService.cs",
@@ -321,8 +328,7 @@
               "RelativeToolTip": "Infrastructure\\Services\\StudentService.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAApwGcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T12:40:43.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T12:40:43.022Z"
             }
           ]
         }

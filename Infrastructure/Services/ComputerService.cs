@@ -65,13 +65,13 @@ namespace Infrastructure.Services
             if (existingComputer != null)
             {
                 throw new Exception($"A computer with serial number {computerDTO.SerialNumber}, {computerDTO.ComputerName}, " +
-                    $"{computerDTO.ComputerVerison} already exists.");
+                    $"{computerDTO.ComputerVersion} already exists.");
             }
 
             var computer = new Computer
             {
                 ComputerName = computerDTO.ComputerName!,
-                ComputerVersion = computerDTO.ComputerVerison,
+                ComputerVersion = computerDTO.ComputerVersion,
                 SerialNumber = computerDTO.SerialNumber
             };
 
