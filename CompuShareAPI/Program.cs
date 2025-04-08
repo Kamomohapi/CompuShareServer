@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Infrastructure;
 using Microsoft.OpenApi.Models;
 using System.Security.Claims;
+using Application.DTOs;
+using Microsoft.Extensions.Options;
 
 namespace CompuShareAPI
 {
@@ -18,7 +20,7 @@ namespace CompuShareAPI
             // Add services to the container.
             builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
                 b => b.MigrationsAssembly(typeof(ServiceContainer).Assembly.FullName)), ServiceLifetime.Scoped);
-
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -74,7 +76,10 @@ namespace CompuShareAPI
                 // Add other Swagger configuration here...
             });
 
-           builder.Services.InfrastructureServices(builder.Configuration);
+            builder.Services.InfrastructureServices(builder.Configuration);
+
+            builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+            builder.Services.AddSingleton(sp => sp.GetRequiredService<IOptions<EmailSettings>>().Value);
 
             builder.Services.AddCors(options =>
             {

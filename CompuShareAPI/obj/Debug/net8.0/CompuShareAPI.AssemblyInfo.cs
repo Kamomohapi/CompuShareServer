@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompuShareAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7decfd235370d1fae67c9ef5bc6451dce9e7719e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97cb2f0946e7b00c1475d71d1e3e6d539230cb8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompuShareAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompuShareAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

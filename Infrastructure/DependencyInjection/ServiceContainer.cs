@@ -51,7 +51,7 @@ namespace Infrastructure.DependencyInjection
             services.AddScoped<IComputer, ComputerService>();
             services.AddScoped<IAdmin, AdminService>();
             services.AddScoped<IComputerApplication, ComputerApplicationService>();
-
+            services.AddScoped<IEmail, EmailService>();
             return services;
         }
     }

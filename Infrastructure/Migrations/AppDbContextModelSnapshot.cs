@@ -54,7 +54,7 @@ namespace Infrastructure.Migrations
                             Id = 1,
                             Email = "thabo@gmail.com",
                             Name = "Thabo",
-                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
                             Surname = "Khoza"
                         },
                         new
@@ -62,7 +62,7 @@ namespace Infrastructure.Migrations
                             Id = 2,
                             Email = "thato@gmail.com",
                             Name = "Thato",
-                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
                             Surname = "Mamatela"
                         });
                 });
@@ -239,7 +239,7 @@ namespace Infrastructure.Migrations
                             IsFunded = false,
                             IsRegistered = true,
                             Name = "Kamohelo",
-                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
                             StudentNumber = 102412345,
                             Surname = "Mohapi"
                         },
@@ -251,7 +251,7 @@ namespace Infrastructure.Migrations
                             IsFunded = false,
                             IsRegistered = true,
                             Name = "Thabo",
-                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
                             StudentNumber = 102423456,
                             Surname = "Mohale"
                         },
@@ -263,7 +263,7 @@ namespace Infrastructure.Migrations
                             IsFunded = false,
                             IsRegistered = true,
                             Name = "Busisiwe",
-                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
                             StudentNumber = 102434567,
                             Surname = "Smith"
                         },
@@ -275,7 +275,7 @@ namespace Infrastructure.Migrations
                             IsFunded = false,
                             IsRegistered = false,
                             Name = "Jabulile",
-                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
                             StudentNumber = 102445678,
                             Surname = "James"
                         },
@@ -287,8 +287,20 @@ namespace Infrastructure.Migrations
                             IsFunded = true,
                             IsRegistered = true,
                             Name = "Molemo",
-                            Password = "$2a$11$U19QY4/h75mYXmG7pksqNOc1R/rp5TdkDoTAhvyyfpTEFheg/Dx56",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
                             StudentNumber = 218501036,
+                            Surname = "Mohapi"
+                        },
+                        new
+                        {
+                            StudentId = 6,
+                            ComputerId = 0,
+                            Email = "kamomohapi17@gmail.com",
+                            IsFunded = false,
+                            IsRegistered = true,
+                            Name = "Kagiso",
+                            Password = "$2a$11$8xmXJBmVFrbqhrPrMeFQh.FmYyaeqHyZ4ImtWUYGP0c8g8wq8tKlG",
+                            StudentNumber = 21851234,
                             Surname = "Mohapi"
                         });
                 });
